@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+.gallery {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Гнучкі колонки */
+    grid-auto-rows: 150px; /* Фіксована висота рядків */
+    grid-auto-flow: dense; /* Заповнення пустих місць */
+}
+
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.large2x2 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.large2x1 {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.large1x2 {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+/* Для великих екранів (телевізори, великі монітори) */
+@media (min-width: 1200px) {
+    .gallery {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+/* Для ноутбуків та звичайних моніторів */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Для мобільних пристроїв */
+@media (max-width: 767px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* .container {
+    display: grid; 
+    grid-auto-columns: auto; 
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto; 
+    grid-template-rows: auto auto auto; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "img1 img1 img2 img3 img4 img4 img9 img10 img5 img5 img13 img13"
+      "img1 img1 img2 img11 img8 img6 img9 img7 img12 . img13 img13"
+      ". . . . img8 . . . . . . ."; 
+  } */
+
+/* @media screen and (max-width: 1300px) */ /* and (max-width: 1300px) */ {
+    /* .galery {  display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "img1 img1 img2 img3 img4 img4"
+          "img1 img1 img2 img9 img10 img11"
+          "img5 img5 img8 img9 img13 img13"
+          "img6 img7 img8 img12 img13 img13";
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .container {
+        display: grid; 
+        grid-template-columns: auto auto auto auto; 
+        grid-template-rows: auto auto auto auto auto auto; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "img1 img1 img2 img3"
+          "img1 img1 img2 img9"
+          "img4 img4 img10 img9"
+          "img5 img5 img13 img13"
+          "img11 img8 img13 img13"
+          "img6 img8 img7 img12"; 
+      }
+    
+    }
+
+    
+
+        
+img[alt="1"] { grid-area: img1; }
+
+img[alt="2"] { grid-area: img2; }
+
+img[alt="3"] { grid-area: img3; }
+
+img[alt="4"] { grid-area: img4; }
+
+img[alt="5"] { grid-area: img5; }
+
+img[alt="6"] { grid-area: img6; }
+
+img[alt="7"] { grid-area: img7; }
+
+img[alt="8"] { grid-area: img8; }
+
+img[alt="9"] { grid-area: img9; }
+
+img[alt="10"] { grid-area: img10; }
+
+img[alt="11"] { grid-area: img11; }
+
+img[alt="12"] { grid-area: img12; }
+
+img[alt="13"] { grid-area: img13; } */
